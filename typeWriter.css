@@ -1,0 +1,59 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/**************/
+/* TYPEWRITER */
+/**************/
+
+#typeWriter {
+	width: 100%;
+	height: 100%;
+	color: #33d011;
+	background: #222;
+	font-family: 'VT323' ,courier;
+	padding-left: 30px;
+	padding-top: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#typeWriter span {
+	display: block;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+#typeWriter :last-child::after {
+	content: '_';
+	display: inline-block;
+	animation: blink 1s step-end infinite;
+}
+
+#typeWriter #init::after {
+	display: none;
+}
+
+#typeWriter span.typewriter-item::before {
+	content: '>';
+	display: inline-block;
+	margin-right: 10px;
+}
+
+@keyframes blink {
+	from, to {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
