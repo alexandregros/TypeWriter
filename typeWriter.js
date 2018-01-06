@@ -1,3 +1,8 @@
+
+/*******************************************************************/
+/* See README.md for more informations about the TypeWriter Object */
+/*******************************************************************/
+
 function TypeWriter(elmt) {
 	this.elmt = elmt;
 	this.selector = $(elmt);
